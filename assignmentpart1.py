@@ -1,8 +1,8 @@
 #python script that smooths data by calculating a moving average
 
 #define the names of the files and set up an output handle
-input_file = 'signal.txt'
-output_file = 'smoothsignal.txt'
+input_file = '/homes/czconnolly/BS32010/datastructures/signal.txt'
+output_file = '/homes/czconnolly/BS32010/datastructures/smoothsignal.txt'
 output_handle = open(output_file, 'w')
 
 #opens signal.txt
