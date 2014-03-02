@@ -4,8 +4,8 @@
 from Bio import SeqIO
 
 #define the names of the files
-input_filename = 'NC_000913.faa'
-output_filename = 'NC_000913_longest_genes.fasta'
+input_filename = '/homes/czconnolly/BS32010/biopython/sample_data/NC_000913.faa'
+output_filename = '/homes/czconnolly/BS32010/biopython/sample_data/NC_000913_longest_genes.fasta'
 
 #create a handle to output the result into
 output_handle = open(output_filename, 'w')
