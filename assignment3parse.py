@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 #import glob,os
 
 #outfile = glob.glob(os.path.join('C:/homes/czconnolly/BS32010/assignment3/*.out'))
@@ -22,10 +24,19 @@ identifier = {}
 
 line = fh.readline()
 
-regexp=r'(\d+) +>([^/]+)/'
-m=re.search(regexp,line)
-print m.group(1)
-#m.group(2)
+for line in fh:
+	regexp=r'(\d+) +>([^/]+)/'
+	m=re.search(regexp,line)
+	if m:
+		group1 = m.group(1)
+		group2 = m.group(2)
+		
+		index[m.group1[0]] = m.group1[1]
+		identifier[m.group2[0]] = m.group2[1]
+
+	
+
+
 
 #line = outfile.readline()
 #while line = regex
