@@ -19,8 +19,9 @@ fh = open(infile)
 output_filename ='/homes/czconnolly/BS32010/assignment3/ig_pairs_parsed.out'
 handle = open(output_filename, 'w')
 
-index = {}
-identifier = {}
+index = []
+identifier= []
+mydict = {}
 
 line = fh.readline()
 
@@ -31,8 +32,12 @@ for line in fh:
 		group1 = m.group(1)
 		group2 = m.group(2)
 		
-		index[m.group1[0]] = m.group1[1]
-		identifier[m.group2[0]] = m.group2[1]
+		index.append(group1)
+		identifier.append(group2)
+		my.dict = {'index':index, 'identifier':identifier}
+	print mydict		
+
+
 
 	
 
