@@ -1,16 +1,5 @@
 #!/usr/bin/python
 
-#import glob,os
-
-#outfile = glob.glob(os.path.join('C:/homes/czconnolly/BS32010/assignment3/*.out'))
-#	fh=open(outfile,'r')
-
-#fh=open(outfile)
-
-
-
-
-
 import re
 
 infile='/homes/czconnolly/BS32010/assignment3/ig_pairs.out'
@@ -34,8 +23,8 @@ for line in fh:
 		
 		index.append(group1)
 		identifier.append(group2)
-		my.dict = {'index':index, 'identifier':identifier}
-	print mydict		
+		mydict = {'index':index, 'identifier':identifier}
+print mydict		
 
 
 
