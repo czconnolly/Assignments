@@ -24,12 +24,28 @@ for line in fh:
 		index.append(group1)
 		identifier.append(group2)
 		mydict = {'index':index, 'identifier':identifier}
-print mydict		
+#print mydict		
 
 
 
-	
+I = line[0:5].strip()
+#J = line[6:10].strip()
+#ILEN =line[11:15].strip()
+#JLEN = line[16:20].strip()
+#MATCH = line[21:30].strip()
+#NGAPS = line[31:37].strip()
+#NALIG = line[38:44].strip()
+#NIDENT = line[45:51].strip()
+#IDENT = line[52:61].strip()
+#NAS = line[62:71].strip()
+#NASAL = line[72:81].strip()
+#NRANS = line[82:88].strip()
+#RMEAN = line[89:98].strip()
+#STDEV = line[99:108].strip()
+#SCORE = line[109:119].strip()
 
+#I = line.strip([0:5])	
+print I
 
 
 #line = outfile.readline()
