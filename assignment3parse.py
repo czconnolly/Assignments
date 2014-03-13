@@ -5,12 +5,17 @@
 
 #fh=open(outfile)
 
-infile='/homes/czconnolly/BS32010/assignment3/ig_pairs.out'
 
-fh = open(infile)
+
 
 
 import re
+
+infile='/homes/czconnolly/BS32010/assignment3/ig_pairs.out'
+fh = open(infile)
+
+output_filename ='/homes/czconnolly/BS32010/assignment3/ig_pairs_parsed.out'
+handle = open(output_filename, 'w')
 
 index = {}
 identifier = {}
