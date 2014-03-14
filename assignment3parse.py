@@ -16,7 +16,7 @@ line = fh.readline()
 
 for line in fh:
 	regexp=r'(\d+) +>([^/]+)/'
-	m=re.search(regexp,line)
+        m=re.search(regexp,line)
 	if m:
 		group1 = m.group(1)
 		group2 = m.group(2)
@@ -26,9 +26,17 @@ for line in fh:
 		mydict = {'index':index, 'identifier':identifier}
 #print mydict		
 
+Ifield = []
+for line in fh:
+	regexp=r'(\d+) +>([^/]+)/'
+        m=re.search(regexp,line)
+	I = line[0:5].strip()
+	if m:
+		pass
+	else:
+		Ifield.append(I)
+print Ifield
 
-
-I = line[0:5].strip()
 #J = line[6:10].strip()
 #ILEN =line[11:15].strip()
 #JLEN = line[16:20].strip()
@@ -44,15 +52,9 @@ I = line[0:5].strip()
 #STDEV = line[99:108].strip()
 #SCORE = line[109:119].strip()
 
-#I = line.strip([0:5])	
-print I
 
 
-#line = outfile.readline()
-#while line = regex
-#	line=fh.readline()
-#index = m.group(1)
-#identifier = m.group(2)
+
 
 
 
