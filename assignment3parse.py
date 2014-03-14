@@ -14,28 +14,25 @@ mydict = {}
 
 line = fh.readline()
 
-for line in fh:
-	regexp=r'(\d+) +>([^/]+)/'
-        m=re.search(regexp,line)
-	if m:
-		group1 = m.group(1)
-		group2 = m.group(2)
+#for line in fh:
+#	regexp=r'(\d+) +>([^/]+)/'
+ #       m=re.search(regexp,line)
+#	if m:
+#		group1 = m.group(1)
+#		group2 = m.group(2)
 		
-		index.append(group1)
-		identifier.append(group2)
-		mydict = {'index':index, 'identifier':identifier}
+#		index.append(group1)
+#		identifier.append(group2)
+#		mydict = {'index':index, 'identifier':identifier}
 #print mydict		
+
 
 Ifield = []
 for line in fh:
-	regexp=r'(\d+) +>([^/]+)/'
-        m=re.search(regexp,line)
-	I = line[0:5].strip()
-	if m:
-		pass
-	else:
-		Ifield.append(I)
+	Ifield.append(line[0:5].strip())
 print Ifield
+
+
 
 #J = line[6:10].strip()
 #ILEN =line[11:15].strip()
