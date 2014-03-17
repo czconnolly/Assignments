@@ -1,13 +1,16 @@
 #!/usr/bin/python
 
+#imports required modules for regular expressions
 import re
 
+#defines the input and output files
 infile='/homes/czconnolly/BS32010/assignment3/serprot_pairs.out'
 fh = open(infile)
 
 output_filename ='/homes/czconnolly/BS32010/assignment3/serprot_pairs_parsed.out'
 handle = open(output_filename, 'w')
 
+#defines the lists and dictionary
 mydict = {}
 I = []
 J = []
@@ -28,6 +31,7 @@ SCORE = []
 
 line = fh.readline()
 
+#for the line in the file, if it equals the regular expression then populate the dictionary
 for line in fh:
 	regexp=r'(\d+) +>([^/]+)/'
         m=re.search(regexp,line)
@@ -36,6 +40,7 @@ for line in fh:
 		mydict[index] = identifier
 fh.close		
 
+#I also tried this instead of regex for the next part
 #for line in fh:
 #	I.append(line[0:5].strip())
 #	J.append(line[6:10].strip())
@@ -56,10 +61,11 @@ fh.close
 fh = open(infile)
 line = fh.readline()
 
+# if the line matches the regex then append the lists with the corresponding column
 for line in fh:
 	try:
 		if line[:2]=='  T':
-		#for line in fh:
+	
        			continue
 		regexp2='(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)$'
     		m2=re.search(regexp2,line)
@@ -84,11 +90,17 @@ for line in fh:
 		else:
 	     		print 'not found'
 
+#not managed to link indexes in both tables
+#I.replace(identifier)
+#J.replace(identifier)
+
+#write the table out to the output handle
+handle.write('\n' + I + '\t' + J + '\t' + ILEN + '\t' + JLEN + '\t' + MATCH + '\t' + NGAPS + '\t'+ NALIG + '\t' + NIDENT + '\t' +IDEN + '\t' + NAS + '\t' + NASAL + '\t' + NRANS + '\t' + RMEAN + '\t' + STDEV + '\t' + SCORE)
+handle.close()
 
 
 
-
-
+#failed attempts below
 #header= fh.readline().strip()
 
 #colnames = {}
