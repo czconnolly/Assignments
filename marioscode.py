@@ -1,7 +1,9 @@
 #!/usr/bin/python
 
+#import the modules required for regexs
 import re
 
+#define input and output files, needs to be altered to use for serprot_pairs file
 infile='/homes/czconnolly/BS32010/assignment3/ig_pairs.out'
 fh = open(infile)
 
@@ -10,11 +12,14 @@ handle = open(output_filename, 'w')
 
 line = fh.readline()
 
+#read lines in until the header line of the second table
 while line[:6] !='     I':
 	line=fh.readline()
 colnames=['I', 'J', 'ILEN', 'JLEN', 'MATCH', 'NGAPS', 'NALIG', 'NIDENT', '%IDENT', 'NAS', 'NASAL', 'NRANS', 'RMEAN', 'STDEV', 'SCORE', 'NUMBER']
+#write the column names out to the output handle
 for c in colnames:
 	handle.write(c+'\t')
+#read in the next table and write out the different columns to the tab delimited output handle
 for line in fh:
 	try:
 		if line[:2]==' T':
