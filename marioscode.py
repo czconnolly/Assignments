@@ -12,7 +12,7 @@ line = fh.readline()
 
 while line[:6] !='     I':
 	line=fh.readline()
-colnames=['I', 'J', 'ILEN', 'MATCH', 'NGAPS', 'NALIG', 'NIDENT', '%IDENT', 'NAS', 'NASAL', 'NRANS', 'RMEAN', 'STDEV', 'SCORE', 'NUMBER']
+colnames=['I', 'J', 'ILEN', 'JLEN', 'MATCH', 'NGAPS', 'NALIG', 'NIDENT', '%IDENT', 'NAS', 'NASAL', 'NRANS', 'RMEAN', 'STDEV', 'SCORE', 'NUMBER']
 for c in colnames:
 	handle.write(c+'\t')
 for line in fh:
