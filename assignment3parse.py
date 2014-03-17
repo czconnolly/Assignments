@@ -54,45 +54,36 @@ fh.close
 #	SCORE.append(line[109:119].strip())
 
 fh = open(infile)
-#line = fh.readline()
-#while line[:5] != '     I':
-#	line=fh.readline()
-#	if line[:2] ==' T':
-	#line=fh.readline()
-#		continue
-
+line = fh.readline()
 
 for line in fh:
 	try:
 		if line[:2]=='  T':
 		#for line in fh:
        			continue
-	regexp2='(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)$'
-    	m2=re.search(regexp2,line)
- 	if m2:
-            	I.append(m2.group(1))
-	     	#		J.append(m2.group(2))
-	       	#		ILEN.append(m2.group(3))
-            	#		JLEN.append(m2.group(4))
-              	#		MATCH.append(m2.group(5))
-              	#		NGAPS.append(m2.group(6))
-            	#		NALIG.append(m2.group(7))
-            	#		NIDENT.append(m2.group(8))
-             	#		IDENT.append(m2.group(9))
-             	#		NAS.append(m2.group(10))
-            	#		NASAL.append(m2.group(11))
-              	#		NRANS.append(m2.group(12))
-              	#		RMEAN.append(m2.group(13))
-     		#		STDEV.append(m2.group(14))
-		#		SCORE.append(m2.group(15))
-               # list.append(m2.group())
-		print m2.group(1)
-	else:
-	     	print 'not found'
+		regexp2='(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)+(\d{1,5}\D*)$'
+    		m2=re.search(regexp2,line)
+ 	#	if m2:
+            		I.append(m2.group(1))
+	   		J.append(m2.group(2))
+	   		ILEN.append(m2.group(3))
+            		JLEN.append(m2.group(4))
+              		MATCH.append(m2.group(5))
+              		NGAPS.append(m2.group(6))
+            		NALIG.append(m2.group(7))
+            		NIDENT.append(m2.group(8))
+             		IDENT.append(m2.group(9))
+             		NAS.append(m2.group(10))
+            		NASAL.append(m2.group(11))
+              		NRANS.append(m2.group(12))
+              		RMEAN.append(m2.group(13))
+     			STDEV.append(m2.group(14))
+			SCORE.append(m2.group(15))
+               	# list.append(m2.group())
+		#print m2.group(1)
+		else:
+	     		print 'not found'
 
-#while list[0:5] == index:
-#                list[0:5] = identifier
-#                print list
 
 
 
